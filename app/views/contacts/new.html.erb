@@ -1,9 +1,8 @@
 <h1>Contact us</h1>
-
-<%= form_with model: @contact, url: contacts_path, data:{turbo: false} do |f| %> 
+ 
+<%= form_with scope: :contact, url: contacts_path, data: { turbo: false } do |f| %> 
 
 	<p>
-		<!-- Title<br /> -->
 		<%= f.label :email %><br />
 		<%= f.text_field :email %>
 	</p>
