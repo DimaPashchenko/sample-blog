@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 		@article = Article.find(params[:id])
 		@article.destroy
 
-		redirect_to @article, status: :see_other
+		redirect_to article_path, status: :see_other
 	end
 
 	def update
