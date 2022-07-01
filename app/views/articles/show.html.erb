@@ -1,6 +1,15 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.text %></p>
 
+
+<h2>Comments</h2>
+<p>	
+	<% @article.comments.each do |comment| %>
+		<i><%= comment.author %> said:</i><br/>
+		<%= comment.body %></br>
+	<% end %>
+</p>
+<h2>Add comment</h2>
 <p>
 	<%= form_with(model: [@article, @article.comments.build], local: true, data:{turbo: false}) do |f| %> 
 
