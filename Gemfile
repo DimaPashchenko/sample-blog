@@ -64,6 +64,8 @@ group :development do
   # gem "spring"
 end
 
+gem "net-http"
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
@@ -73,3 +75,8 @@ end
 
 gem 'devise'
 gem 'bootstrap'
+
+group :test, :development do
+   gem 'rspec-rails', '~> 5.0.0'
+   gem 'capybara'
+end
